@@ -18,4 +18,6 @@ Target 13.3: Improve education, awareness-raising and human and institutional ca
 
 "We as humans cannot think just in numbers and we tend to forget how our daily actions impact the climate"
 
-Data products can help there: On the one hand they can make visible
+Data products can help there: On the one hand they can make visible how much we as humans harm the planet. On the other hand they can help people to understand that in a more visible way. As data is not a language everyone speaks it needs some products to make that more visible. 
+
+
