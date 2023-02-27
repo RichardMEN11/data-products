@@ -1,12 +1,14 @@
 from flask import Flask
+from flask import request
+import pickle 
+
+model = pickle.load(open('./models/regr-model.pkl', 'rb'))
 
 app = Flask(__name__)
 
-
-@app.route('/')
-def hello():
-    return '<h1>Hello, World!</h1>'
-
-@app.route('/predict-emission')
+@app.route('/predict-emission', methods=['POST'])
 def predict_emission():
-    print(request)
+    data = request.get_json()
+    predicted_val = model.predict([[data['value']]])
+    predicted_val_as_list = predicted_val.tolist()
+    return predicted_val_as_list[0]
