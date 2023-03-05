@@ -8,9 +8,9 @@ app = Flask(__name__)
 
 # TODO: find good values for emissions
 def getTrafficLightForEmission(emission):
-    if emission <= 100:
+    if emission[0] <= 100:
         return "green"
-    elif emission <= 200:
+    elif emission[0] <= 200:
         return "yellow"
     else:
         return "red"
@@ -25,3 +25,4 @@ def predict_emission():
         "predicted_emission": predicted_val_as_list[0],
         "traffic_light": traffic_light
     }
+
